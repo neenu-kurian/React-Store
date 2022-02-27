@@ -2,9 +2,9 @@ import React, { useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { selectedProduct } from "../redux/actions/products";
-import Review from "./Reviews";
-import Back from "./BackButton";
+import { selectedProduct } from "../../redux/actions/products";
+import Review from "../Reviews/Reviews";
+import Back from "../BackButton/BackButton";
 
 import Grid from "@mui/material/Grid";
 import { Container, Typography } from "@mui/material";
@@ -25,7 +25,7 @@ const ProductDetail = () => {
     if (productId && productId !== "") fetchProduct();
   }, [productId]);
 
-  const { currency, description, id, imgUrl, name, price } = { ...product };
+  const { currency, description, imgUrl, name, price } = { ...product };
 
 
   return (

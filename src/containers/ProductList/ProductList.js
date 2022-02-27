@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { getProducts } from "../redux/actions/products";
-import Product from "./Product";
+import { getProducts } from "../../redux/actions/products";
+import Product from "../Product/Product";
 import axios from "axios";
 
 const ProductList = () => {

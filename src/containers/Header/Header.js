@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../adidas-logo.png";
+import logo from "../../images/adidas-logo.png";
 import useStyles from "./Header.styles";
 
 import AppBar from "@mui/material/AppBar";
