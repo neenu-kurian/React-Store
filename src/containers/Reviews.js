@@ -95,7 +95,7 @@ const Review = () => {
             onChange={(e) => setReview(e.target.value)}
           />
 
-          <Button sx={{ mt: 3 }} variant="outlined" size="medium" type="submit" className={classes.submitbtn}>
+          <Button sx={{ mt: 3 }} variant="outlined" size="medium" type="submit" sx={{display: "block",mt:3}}>
             Submit Review
           </Button>
         </Box>

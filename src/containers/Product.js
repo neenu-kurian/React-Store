@@ -1,14 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import useStyles from "./Product.styles";
+import { useSelector } from "react-redux";
+
 import Card from "@mui/material/Card";
 import Box from "@mui/material/Box";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { Link } from "react-router-dom";
-import useStyles from "./Product.styles";
-import { useSelector } from "react-redux";
 import { MenuItem } from "@mui/material";
-
+import { ThemeProvider } from "@mui/private-theming";
 
 const Product = () => {
   const products = useSelector((state) => state.allProducts.products);
@@ -22,6 +23,7 @@ const Product = () => {
           <Card className={classes.card}>
             <CardMedia component="img" image={imgUrl} alt={name} />
             <CardContent>
+            <ThemeProvider >
               <Typography variant="h5" component="div">
                 {name}
               </Typography>
@@ -31,6 +33,7 @@ const Product = () => {
               <Typography variant="body2" color="text.secondary">
                 {currency} {price}
               </Typography>
+              </ThemeProvider>
             </CardContent>
           </Card>
         </MenuItem>

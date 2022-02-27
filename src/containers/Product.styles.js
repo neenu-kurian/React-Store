@@ -1,9 +1,8 @@
-import { ImportantDevices } from "@mui/icons-material";
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles(() => ({
   card: {
-    width: 380,
+    width: 290,
     margin: "0 2px 10px 0.5px",
   },
   box: {
@@ -12,7 +11,10 @@ const useStyles = makeStyles(() => ({
     justifyContent: "center",
   },
   menuitem: {
-      backgroundColor: "transparent !important"
+      backgroundColor: "transparent !important",
+  },
+  typography: {
+    fontFamily: ["Roboto", "sans-serif"].join(","),
   }
 }));
 
