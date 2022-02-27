@@ -1,8 +1,8 @@
-import Header from "./containers/Header/Header";
+import Header from "./components/Header/Header";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ProductList from "./containers/ProductList/ProductList";
-import ProductDetail from "./containers/ProductDetail/ProductDetail";
-import NotFound from "./containers/NotFound/NotFound";
+import ProductList from "./components/ProductList/ProductList";
+import ProductDetail from "./components/ProductDetail/ProductDetail";
+import NotFound from "./components/NotFound/NotFound";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
