@@ -23,7 +23,6 @@ const Product = () => {
           <Card className={classes.card}>
             <CardMedia component="img" image={imgUrl} alt={name} />
             <CardContent>
-            <ThemeProvider >
               <Typography variant="h5" component="div">
                 {name}
               </Typography>
@@ -33,7 +32,6 @@ const Product = () => {
               <Typography variant="body2" color="text.secondary">
                 {currency} {price}
               </Typography>
-              </ThemeProvider>
             </CardContent>
           </Card>
         </MenuItem>

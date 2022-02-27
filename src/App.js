@@ -20,7 +20,10 @@ const theme = createTheme({
   typography: {
     fontFamily: ["Roboto", "sans-serif"].join(","),
   },
-  shadows: ["none"],
+  shadows: {
+    1: '0px 11px 15px -7px white,0px 24px 38px 3px whtie,0px 9px 46px 8px white',
+    4: '0px 11px 15px -7px white,0px 24px 38px 3px whtie,0px 9px 46px 8px white',
+  }
 });
 
 function App() {
