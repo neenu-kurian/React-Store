@@ -12,7 +12,7 @@ import Box from "@mui/material/Box";
 const SubmitReview = () => {
   const { productId } = useParams();
 
-  const [rating, setValue] = React.useState(0);
+  const [rating, setRating] = React.useState(0);
   const [review, setReview] = React.useState("");
   const classes = useStyles();
 
@@ -30,6 +30,14 @@ const SubmitReview = () => {
     });
   };
 
+  const changeReview = (event) => {
+    setReview(event.target.value);
+  }
+
+  const changeRating = (event) => {
+      setRating(event.target.value);
+  }
+
   return (
     <form onSubmit={submitReview}>
       <Typography sx={{ mt: 3 }}>Write a Review</Typography>
@@ -37,9 +45,7 @@ const SubmitReview = () => {
         name="simple-controlled"
         value={rating}
         sx={{ mt: 2 }}
-        onChange={(event, newValue) => {
-          setValue(newValue);
-        }}
+        onChange={changeRating}
       />
       <Box component="span" sx={{ display: "block", mt: 1 }}>
         <TextField
@@ -50,7 +56,7 @@ const SubmitReview = () => {
           multiline
           minRows={3}
           placeholder={"type review here..."}
-          onChange={(e) => setReview(e.target.value)}
+          onChange={changeReview}
         />
 
         <Button variant="outlined" size="medium" type="submit" sx={{ display: "block", mt: 3 }}>
