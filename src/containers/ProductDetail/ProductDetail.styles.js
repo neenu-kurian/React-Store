@@ -3,7 +3,7 @@ import { makeStyles } from "@mui/styles";
 const useStyles = makeStyles((theme) => ({
   image: {
     width: "100%",
-    height: "75%",
+    maxHeight: 650,
   },
   grid: {
     [theme.breakpoints.down("sm")]: {
