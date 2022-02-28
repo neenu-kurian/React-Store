@@ -36,7 +36,7 @@ const SubmitReview = () => {
   }
 
   const changeRating = (event) => {
-      setRating(event.target.value);
+      setRating(parseInt(event.target.value));
   }
 
   return (
