@@ -14,6 +14,7 @@ const SubmitReview = () => {
 
   const [rating, setRating] = React.useState(0);
   const [review, setReview] = React.useState("");
+  const [error, setError] = React.useState(false);
   const classes = useStyles();
 
   const submitReview = async (event) => {
@@ -25,8 +26,8 @@ const SubmitReview = () => {
       text: review,
     };
 
-    await axios.post(`/productreview/reviews/${productId}`, { ...datatoPost }).catch((err) => {
-      console.log("error", err);
+    await axios.post(`/productreview/reviews/${productId}`, { ...datatoPost }).catch(() => {
+      setError(true);
     });
   };
 
@@ -62,6 +63,7 @@ const SubmitReview = () => {
         <Button variant="outlined" size="medium" type="submit" sx={{ display: "block", mt: 3 }}>
           Submit Review
         </Button>
+        {error && <Typography variant="subtitle1">Could submit review, please try again</Typography>}
       </Box>
     </form>
   );
